@@ -1,14 +1,14 @@
 ## Construire
 FROM beevelop/ionic:latest AS ionic
 
-## Create workdir app
+## Crreate workdir app
 WORKDIR /usr/src/app
 
 # Copy package.json package-lock.json on current container directory
 COPY package*.json ./
 
 #Install dependencies
-RUN npm install --force 
+RUN npm ci 
 
 # Copy all others files needed
 COPY . .
@@ -21,4 +21,4 @@ RUN ionic build
 FROM nginx:alpine
 
 # COPY www /usr/share/nginx/html
-COPY --from=ionic /usr/src/app/www /usr/share/nginx/html
+COPY --from=ionic /usr/src/app/www /usr/share/nginx/htmlj

@@ -9,7 +9,6 @@ COPY package*.json ./
 # Install dependencies
 RUN npm ci
 
-
 # Copy all others files needed
 COPY . .
 
@@ -17,4 +16,4 @@ COPY . .
 EXPOSE 8080
 
 # Run server when container is up
-CMD [ "npm", "run", "prod" ]
+CMD [ "npm", "run", "dev" ]
