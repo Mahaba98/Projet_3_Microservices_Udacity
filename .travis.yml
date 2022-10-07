@@ -16,10 +16,10 @@ before_script:
 script:
   - docker --version # print the version for logging
   - docker-compose -f docker-compose-build.yaml build --parallel
-  - docker tag reverseproxy mahaba98/reverseproxy:v1
+  - docker tag mahaba98/reverseproxy mahaba98/reverseproxy:v1
   - docker tag udagram-api-user mahaba98/udagram-api-user:v1
   - docker tag udagram-api-feed mahaba98/udagram-api-feed:v1
-  - docker tag  udagram-frontend mahaba98/udagram-frontend:v1
+  - docker tag mahaba98/udagram-frontend mahaba98/udagram-frontend:v1
   - docker images # print all images building
 
 
