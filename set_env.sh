@@ -3,7 +3,7 @@
 export POSTGRES_USERNAME=mariama
 export POSTGRES_PASSWORD=Balygueye7
 export POSTGRES_HOST= postgres.chbrcxrn6poy.us-east-1.rds.amazonaws.com
-export POSTGRES_DB=postgres
+export POSTGRES_DB=database_user_info
 export AWS_BUCKET=images-524757988542-dev
 export AWS_REGION=us-east-1
 export AWS_PROFILE=default

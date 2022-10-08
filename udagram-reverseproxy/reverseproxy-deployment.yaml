@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    service: reverseproxy
   name: reverseproxy
+  labels:
+    app: reverseproxy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: reverseproxy
+      app: reverseproxy
   template:
     metadata:
       labels:
-        service: reverseproxy
+        app: reverseproxy
     spec:
       containers:
-      - image: mahaba98/reverseproxy
-        name: reverseproxy
-        imagePullPolicy: Always          
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "1024Mi"
-            cpu: "500m"       
-        ports:
-        - containerPort: 8080
+        - name: reverseproxy
+          image: mahaba98/reverseproxy:v1
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "1024Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
       restartPolicy: Always
