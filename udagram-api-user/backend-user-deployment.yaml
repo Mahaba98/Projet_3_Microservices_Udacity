@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-user 
-  labels:
-    app: udagram-api-user
+  name: user 
+  labels: 
+    app: user
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-user
+      app: user
   template:
     metadata:
       labels:
-        app: udagram-api-user
+        app: user
     spec:
       containers:
-        - name: udagram-api-user
+        - name: user
           image: mahaba98/udagram-api-user:v1
           envFrom:
             - secretRef:

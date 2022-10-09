@@ -3,29 +3,22 @@ kind: Deployment
 metadata:
   name: frontend
   labels:
-    app: udagram-frontend-deployment
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-frontend-deployment
+      app: frontend
   template:
     metadata:
       labels:
-        app: udagram-frontend-deployment
+        app: frontend
     spec:
       containers:
-        - name: udagram--deployment
+        - name: frontend
           image: mahaba98/udagram-frontend:v1
-          envFrom:
-            - secretRef:
-                name: udagram-env-secret
-            - secretRef:
-                name: udagram-aws-secret
-            - configMapRef:
-                name: udagram-configmap
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           resources:
             limits:
               cpu: 2000m

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-feed 
+  name: feed 
   labels:
-    app: udagram-api-feed-deployment
+    app: feed
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: udagram-api-feed-deployment
+      app: feed
   template:
     metadata:
       labels:
-        app: udagram-api-feed-deployment
+        app: feed
     spec:
       containers:
-        - name: udagram-api-feed-deployment
+        - name: feed
           image: mahaba98/udagram-api-feed:v1
           envFrom:
             - secretRef:

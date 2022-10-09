@@ -5,5 +5,5 @@ metadata:
 data:
   AWS_REGION: us-east-1
   AWS_PROFILE: default
-  AWS_BUCKET: image-858591532527-dev
+  AWS_BUCKET: images-524757988542-dev
   URL: http://localhost:8100
