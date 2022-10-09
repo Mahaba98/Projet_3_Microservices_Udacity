@@ -1,0 +1,3 @@
+J'ai eu un problème de version avec le frontend. Lorsque je tape la commande npm install, il m'affiche des erreurs de version.
+Donc j'ai utilisé la commande npm install --force pour installer mais j'obtiens dans la page de l'application une page vierge.
+J'ai montré ça à mon prof de session mais on n'a pas pu trouvé de solution. Donc j'ai continué en utilisant la ligne de commande et postman
