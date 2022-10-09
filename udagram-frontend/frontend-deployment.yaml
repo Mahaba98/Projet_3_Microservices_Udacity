@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: mahaba98/udagram-frontend:v1
+          image: mahaba98/udagram-frontend:v2
           ports:
             - containerPort: 80
           resources:
